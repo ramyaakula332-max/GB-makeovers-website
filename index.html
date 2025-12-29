@@ -1,88 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GB.com - Growing Dreams, Cultivating Peace</title>
-
-    <link rel="stylesheet" href="styles.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Prata&display=swap" rel="stylesheet">
-    
+<meta charset="UTF-8">
+<title>New Year Spin Wishes</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<section class="hero-section">
-    <div class="hero-overlay"> 
-        <nav class="top-nav-hero"> <ul>
-                <li><a href="#garden">Gardens</a></li>
-                <li><a href="#balcony">Balconies</a></li>
-                <li><a href="#guides">Guides</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
 
-        <div class="hero-text">
-            <h1>Growing Dreams, Cultivating Peace</h1>
-            <p>Nature's embrace, wherever you are.</p>
-            <a href="#garden" class="cta-button">Explore Our Roots</a>
-            <a href="#balcony" class="cta-button">Explore Our Roots</a>
-        </div>
+<div class="card">
+  <h2>🎆 New Year Spin Wishes 🎆</h2>
+  <p>👑 Founder: <b>Ramya Akula</b></p>
+
+  <div id="userForm">
+    <input id="name" placeholder="Enter your name">
+    <input id="phone" placeholder="Enter phone number">
+    <button onclick="submitUser()">Submit</button>
+  </div>
+
+  <div id="interest" style="display:none;">
+    <p>Are you interested in spinning the wheel?</p>
+    <button onclick="showWheel(true)">Yes</button>
+    <button onclick="showWheel(false)">No</button>
+  </div>
+
+  <div class="wheel-box" id="wheelBox">
+    <div class="pointer"></div>
+    <div id="result-label">Result</div>
+
+    <div class="wheel" id="wheel">
+      <div class="segment" style="transform: rotate(0deg) translate(100%) rotate(-0deg);">💖 Wish</div>
+      <div class="segment" style="transform: rotate(72deg) translate(100%) rotate(-72deg);">📸 Photo</div>
+      <div class="segment" style="transform: rotate(144deg) translate(100%) rotate(-144deg);">😂 Funny</div>
+      <div class="segment" style="transform: rotate(216deg) translate(100%) rotate(-216deg);">🌍 Dream</div>
+      <div class="segment" style="transform: rotate(288deg) translate(100%) rotate(-288deg);">🤪 Q</div>
     </div>
-</section>
-    
-     <section id="garden" class="content-section light-bg">
-    <h2 class="section-title">G: Garden Inspiration</h2>
-    
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="g1.jpg" alt="Lush Perennial Borders">
-            <p>Lush Perennial Borders</p>
-        </div>
-        <div class="gallery-item">
-            <img src="placeholder-garden2.jpg" alt="Charming Evening Retreat">
-            <p>Charming Evening Retreat</p>
-        </div>
-        <div class="gallery-item">
-            <img src="placeholder-vertical3.jpg" alt="Elegant Pathways">
-            <p>Elegant Pathways</p>
-        </div>
-    </div>
-    </section>
-     <section id="Balcony" class="content-section light-bg">
-    <h2 class="section-title">B: Balcony Inspiration</h2>
-    
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="g1.jpg" alt="Lush Perennial Borders">
-            <p>Lush Perennial Borders</p>
-        </div>
-        <div class="gallery-item">
-            <img src="g2.jpg" alt="Charming Evening Retreat">
-            <p>Charming Evening Retreat</p>
-        </div>
-        <div class="gallery-item">
-            <img src="g3.jpg" alt="Elegant Pathways">
-            <p>Elegant Pathways</p>
-        </div>
-    </div>
-     </section>
-    <section id="guides" class="content-section dark-bg">
-        <h2 class="section-title white-text">B: Essential Guides & Tips</h2>
-        <p class="white-text" style="text-align: center;">Unlock the secrets to a thriving green space with our curated collection of resources.</p>
-        <ul class="guide-list">
-            <li>Choosing the Right Soil for Every Container</li>
-            <li>Mastering Vertical Gardening Techniques</li>
-            <li>The Art of Water Conservation in Balcony Spaces</li>
-        </ul>
-        <a href="#guides" class="cta-button gold-cta">View All Guides</a>
-    </section>
 
+    <button onclick="spin()">🔄 SPIN</button>
+  </div>
 
-    <footer id="contact" class="contact-bar">
-        <div class="contact-content">
-            <p>Connect with GB</p>
-            <a href="mailto:info@yourgbdomain.com" class="footer-email-button">Email Us</a>
-        </div>
-    </footer>
+  <div id="content"></div>
+  <p>✨ Happy New Year ✨</p>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
